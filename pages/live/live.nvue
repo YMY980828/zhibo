@@ -1,0 +1,74 @@
+<template>
+	<view>
+		<video autoplay src="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"></video>
+	    
+		<!-- 头部 -->
+		<view class="header" :style="'top:'+statusBarHeight+'px'">
+			<!-- 个人信息|观看详细信息 -->
+			<view  class="p" style="height: 80rpx;">
+				
+			</view>
+			<!-- 金币 -->
+			<view style="height: 80rpx;">
+				
+			</view>
+			<!-- 礼物 -->
+			<view style="height: 500rpx;" class="">
+				<view style="width: 520rpx;">
+					
+				</view>
+			</view>
+		</view>
+		
+		<!-- 弹幕 -->
+		<view class="barrage" style="width: 520rpx; height: 300rpx;">
+			
+		</view>
+		
+		<!-- 底部 -->
+		<view class="footer" style="height: 120rpx;">
+			
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				statusBarHeight:0
+			}
+		},
+		onLoad() {
+			uni.getSystemInfo({
+				success:(res)=>{
+					this.statusBarHeight=res.statusBarHeight
+				}
+			})
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style lang="less">
+	.header{
+		position: fixed;
+		left: 0;
+		right: 0;
+		background-color: red;
+	}
+	.barrage{
+		position: fixed;
+		bottom: 120rpx;
+		left: 0;
+		right: 0;
+	}
+	.footer{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+</style>

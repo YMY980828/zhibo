@@ -1,0 +1,25 @@
+<template>
+	<view>
+		<live-pusher >
+			
+			
+		</live-pusher>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>
